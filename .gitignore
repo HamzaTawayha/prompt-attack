@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+
+# Virtual env
+.venv/
+venv/
+env/
+
+# Models / artifacts
+models/
+*.joblib
+*.pth
+*.pt
+*.ckpt
+
+# HuggingFace + cache
+.hf_cache/
+.cache/
+.cache/huggingface/
+.cache/torch/
+~/.cache/huggingface
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# logs
+*.log
