@@ -1,4 +1,4 @@
-# PromptAttack — MVP
+# PromptAttack
 
 **PromptAttack** is a lightweight **prompt-jailbreak detector** for LLMs.
 
@@ -16,5 +16,3 @@ pip install --no-cache-dir sentence-transformers datasets scikit-learn joblib tq
 
 python promptattack/train_detector.py --max-examples 1000 --embedder all-mpnet-base-v2 --outname sbert_lr_detector_quick
 python promptattack/infer.py --model models/sbert_lr_detector_quick.joblib --file examples/test_prompts.txt --threshold 0.5
-
-
