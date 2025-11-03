@@ -16,3 +16,11 @@ pip install --no-cache-dir sentence-transformers datasets scikit-learn joblib tq
 
 python promptattack/train_detector.py --max-examples 1000 --embedder all-mpnet-base-v2 --outname sbert_lr_detector_quick
 python promptattack/infer.py --model models/sbert_lr_detector_quick.joblib --file examples/test_prompts.txt --threshold 0.5
+
+## Note about heuristics
+This project includes a lightweight rule-based sanity layer that:
+- forces **very short** alphabetic prompts (e.g., "hi", "hello") to **SAFE**, and
+- forces prompts matching explicit danger phrases (e.g., "explosive", "make a bomb") to **JAILBREAK**.
+
+These heuristics are intended to prevent obvious false positives/negatives in the MVP demo; a production system would use a more comprehensive policy + retraining and calibration.
+
